@@ -1,4 +1,4 @@
-{% set version = "2.0.0" %}
+{% set version = "2.1.0" %}
 
 package:
   name: djangorestframework-csv
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/d/djangorestframework-csv/djangorestframework-csv-{{ version }}.tar.gz
-  sha256: 641feb000d622cec2113005988c03c9a9ba7ec31e1f422f16b098e2a42f4cc8d
+  sha256: 2f008b20a44f2d3c37835ea5b5ddfe19f54394f07b9cb267c616a917a7f7e27c
 
 build:
   number: 0
