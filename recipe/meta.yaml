@@ -1,24 +1,26 @@
-{% set version = "2.1.0" %}
+{% set name = "djangorestframework-csv" %}
+{% set version = "2.1.1" %}
+
 
 package:
-  name: djangorestframework-csv
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/d/djangorestframework-csv/djangorestframework-csv-{{ version }}.tar.gz
-  sha256: 2f008b20a44f2d3c37835ea5b5ddfe19f54394f07b9cb267c616a917a7f7e27c
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-csv-{{ version }}.tar.gz
+  sha256: aa0ee4c894fe319c68e042b05c61dace43a9fb6e6872e1abe1724ca7ea4d15f7
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
-    - python
+  host:
     - pip
+    - python >=3.6
   run:
-    - python
+    - python >=3.6
     - djangorestframework
     - six
     - unicodecsv
@@ -26,11 +28,16 @@ requirements:
 test:
   imports:
     - rest_framework_csv
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/mjumbewu/django-rest-framework-csv
-  license: BSD
-  summary: 'CSV Tools for Django REST Framework'
+  summary: CSV Tools for Django REST Framework
+  license: BSD-2-Clause
+  license_file: LICENSE
 
 extra:
   recipe-maintainers:
