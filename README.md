@@ -3,7 +3,7 @@ About djangorestframework-csv
 
 Home: https://github.com/mjumbewu/django-rest-framework-csv
 
-Package license: BSD
+Package license: BSD-2-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/djangorestframework-csv-feedstock/blob/master/LICENSE.txt)
 
