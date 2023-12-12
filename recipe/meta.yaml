@@ -1,5 +1,5 @@
 {% set name = "djangorestframework-csv" %}
-{% set version = "3.0.1" %}
+{% set version = "3.0.2" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/djangorestframework-csv-{{ version }}.tar.gz
-  sha256: 76ca3530c362e90ed46316002ea0b17e7e4e14c78240c787125d2c8f7c6c0174
+  sha256: b269b692feda1971e1342f395a21d339c6a16d2961ff64357a9a6188f27af10f
 
 build:
   number: 0
@@ -17,13 +17,11 @@ build:
 
 requirements:
   host:
+    - python >=3.7
     - pip
-    - python >=3.6
   run:
-    - python >=3.6
+    - python >=3.7
     - djangorestframework
-    - six
-    - unicodecsv
 
 test:
   imports:
